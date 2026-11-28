@@ -5,21 +5,33 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>EDS research 2026</title>
 <style>
-body{font-family:system-ui,sans-serif;font-size:16px;line-height:26px;color:#202122;background:#fff;margin:0 auto;padding:0 16px 32px;max-width:720px}
-header.site{background:#f8f9fa;margin:0 -16px;padding:12px 16px}
+:root{--fs-body:16px;--lh-body:26px;--fs-title:32px;--lh-title:40px;--fs-h1:26px;--lh-h1:32px;--fs-h2:22px;--lh-h2:28px;--fs-h4:17px;--lh-h4:22px;--fs-ref:14px;--lh-ref:20px;--fs-refnum:13px;--fs-sup:12px;--fs-notice:15px;--lh-notice:20px;--fs-toc:15px;--lh-toc:22px;--fs-toc-title:15px;--fs-footer:13px;--lh-footer:19px}
+html.text-small{--fs-body:14px;--lh-body:23px;--fs-title:28px;--lh-title:35px;--fs-h1:23px;--lh-h1:29px;--fs-h2:20px;--lh-h2:26px;--fs-h4:16px;--lh-h4:21px;--fs-ref:13px;--lh-ref:19px;--fs-refnum:12px;--fs-sup:11px;--fs-notice:14px;--lh-notice:19px;--fs-toc:14px;--lh-toc:22px;--fs-toc-title:14px;--fs-footer:12px;--lh-footer:18px}
+html.text-large{--fs-body:18px;--lh-body:29px;--fs-title:36px;--lh-title:45px;--fs-h1:29px;--lh-h1:36px;--fs-h2:24px;--lh-h2:30px;--fs-h4:19px;--lh-h4:24px;--fs-ref:15px;--lh-ref:22px;--fs-refnum:14px;--fs-sup:13px;--fs-notice:16px;--lh-notice:22px;--fs-toc:16px;--lh-toc:24px;--fs-toc-title:16px;--fs-footer:14px;--lh-footer:20px}
+html.text-xl{--fs-body:20px;--lh-body:32px;--fs-title:40px;--lh-title:50px;--fs-h1:32px;--lh-h1:40px;--fs-h2:26px;--lh-h2:33px;--fs-h4:20px;--lh-h4:26px;--fs-ref:16px;--lh-ref:24px;--fs-refnum:15px;--fs-sup:14px;--fs-notice:17px;--lh-notice:23px;--fs-toc:17px;--lh-toc:26px;--fs-toc-title:17px;--fs-footer:14px;--lh-footer:20px}
+html.text-huge{--fs-body:24px;--lh-body:39px;--fs-title:48px;--lh-title:60px;--fs-h1:39px;--lh-h1:48px;--fs-h2:33px;--lh-h2:42px;--fs-h4:26px;--lh-h4:33px;--fs-ref:21px;--lh-ref:30px;--fs-refnum:20px;--fs-sup:18px;--fs-notice:23px;--lh-notice:30px;--fs-toc:23px;--lh-toc:33px;--fs-toc-title:23px;--fs-footer:20px;--lh-footer:29px}
+body{font-family:system-ui,sans-serif;font-size:var(--fs-body);line-height:var(--lh-body);color:#202122;background:#fff;margin:0 auto;padding:0 16px 32px;max-width:720px}
+header.site{display:flex;align-items:center;gap:12px;flex-wrap:wrap;background:#f8f9fa;margin:0 calc(50% - 50vw);padding:12px calc(50vw - 50%)}
 header.site nav{font-family:system-ui,sans-serif;font-size:14px;line-height:22px}
-header.site nav a{margin-right:12px}
+header.site nav a{display:inline-block;padding:12px 6px;margin-right:6px}
 header.site nav a[aria-current="page"]{font-weight:bold;text-decoration:none;color:#202122}
+.text-size-control{margin-left:auto;display:flex;align-items:center;gap:8px;font-family:system-ui,sans-serif;font-size:14px;line-height:22px;flex:none}
+.text-size-control label{flex:none}
+.text-size-control select{font:inherit;padding:6px 4px;border:1px solid #72777d;background:#fff;color:#202122}
+@media (max-width:719px){.text-size-control label{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}}
 a{color:#3366cc;text-decoration:none}
 a:visited{color:#795cb2}
 a:hover,a:focus{text-decoration:underline}
-h1{font-family:Georgia,serif;font-size:32px;line-height:40px;font-weight:normal;margin:12px 0 16px}
-h2{font-family:Georgia,serif;font-size:26px;line-height:32px;font-weight:normal;border-bottom:1px solid #c8ccd1;margin:14px 0 8px;padding-bottom:10px}
-h2.references-heading{font-size:22px;line-height:28px;border-bottom:none;border-top:1px solid #c8ccd1;padding-top:12px;margin-top:24px}
-h3{font-family:Georgia,serif;font-size:22px;line-height:28px;font-weight:normal;border-bottom:1px solid #c8ccd1;margin:14px 0 8px;padding-bottom:10px}
-h4{font-size:17px;line-height:22px;font-weight:bold}
-p.notice{font-family:system-ui,sans-serif;font-size:15px;line-height:20px;background:#f4f9fe;border-left:4px solid #3366cc;padding:4px 8px}
-ul{padding-left:20px;margin:0 0 12px}
+a:focus-visible,summary:focus-visible{outline:2px solid #3366cc;outline-offset:1px}
+h1{font-family:"Linux Libertine",Georgia,Times,serif;font-size:var(--fs-title);line-height:var(--lh-title);font-weight:normal;margin:12px 0 16px}
+h2{font-family:"Linux Libertine",Georgia,Times,serif;font-size:var(--fs-h1);line-height:var(--lh-h1);font-weight:normal;border-bottom:1px solid #c8ccd1;margin:14px 0 8px;padding-bottom:10px}
+h2.references-heading{font-size:var(--fs-h2);line-height:var(--lh-h2);border-bottom:none;border-top:1px solid #c8ccd1;padding-top:12px;margin-top:24px}
+h3{font-family:"Linux Libertine",Georgia,Times,serif;font-size:var(--fs-h2);line-height:var(--lh-h2);font-weight:normal;border-bottom:1px solid #c8ccd1;margin:14px 0 8px;padding-bottom:10px}
+h4{font-family:"Linux Libertine",Georgia,Times,serif;font-size:var(--fs-h4);line-height:var(--lh-h4);font-weight:normal}
+p.notice{font-family:system-ui,sans-serif;font-size:var(--fs-notice);line-height:var(--lh-notice);background:#f8f9fa;border:1px solid #a2a9b1;border-left:10px solid #3366cc;padding:4px 8px;display:flex;align-items:center;gap:8px}
+p.notice .notice-icon{flex:none;width:40px;height:40px}
+ul{padding-left:14px;margin:0 0 12px}
+sup{font-size:var(--fs-sup)}
 li{margin-bottom:0;padding:2px 0;overflow-wrap:break-word}
 p{margin:0 0 12px;overflow-wrap:break-word}
 details.section summary{list-style:none;cursor:pointer;display:flex;align-items:center;border-bottom:1px solid #c8ccd1;padding:14px 0 10px;margin-bottom:8px}
@@ -29,155 +41,196 @@ details.section summary .chevron{font-size:14px;color:#54595d;padding-right:8px;
 details.section summary .chevron::before{content:"▴"}
 details.section:not([open]) summary .chevron::before{content:"▾"}
 details.section summary h2,details.section summary h3{flex:1;margin:0;padding-bottom:0;border-bottom:none}
-.section-anchor{display:block}
-details.contents{font-family:system-ui,sans-serif;margin:12px 0}
-details.contents summary{font-size:15px;line-height:22px;font-weight:bold;cursor:pointer;list-style:none;display:flex;align-items:center}
+details.section summary h2.references-heading{border-top:none;margin-top:0;padding-top:0}
+details.section.subsection{margin-left:2em}
+.section-anchor{display:block;scroll-margin-top:72px}
+details.contents{font-family:system-ui,sans-serif;margin:12px 0;border:1px solid #aaa;background:#f8f9fa;padding:7px;display:table;max-width:100%;box-sizing:border-box;font-size:95%}
+details.contents summary{font-size:var(--fs-toc-title);line-height:var(--lh-toc);font-weight:bold;cursor:pointer;list-style:none;display:flex;align-items:center;justify-content:center;padding:11px 0}
 details.contents summary::-webkit-details-marker{display:none}
 details.contents summary::marker{content:""}
 details.contents summary .chevron{font-size:14px;color:#54595d;padding-right:8px;flex:none}
 details.contents summary .chevron::before{content:"▴"}
 details.contents:not([open]) summary .chevron::before{content:"▾"}
-details.contents ul{margin:4px 0;padding-left:20px}
-details.contents li{margin-bottom:0;padding:10px 0}
-details.contents li a{font-family:Georgia,serif;font-size:18px;line-height:24px}
-footer.site{font-family:system-ui,sans-serif;font-size:13px;line-height:19px;border-top:1px solid #c8ccd1;margin-top:24px;padding-top:12px;color:#54595d}
-ol.references{font-size:14px;line-height:20px}
-ol.references li{overflow-wrap:break-word}
-.bug-overlay{position:fixed;inset:0;background:rgba(0,0,0,.5);display:none;align-items:flex-start;justify-content:center;padding:24px 12px;z-index:10}
+details.contents summary h2{display:inline;font-family:system-ui,sans-serif;font-size:var(--fs-toc-title);line-height:var(--lh-toc);font-weight:bold;border-bottom:none;margin:0;padding:0}
+details.contents summary .toctoggle{font-size:12px;line-height:var(--lh-toc);font-weight:normal;margin-left:4px}
+details.contents summary .toctoggle::before{content:"[hide]"}
+details.contents:not([open]) summary .toctoggle::before{content:"[show]"}
+details.contents ul{list-style:none;margin:4px 0;padding:0}
+details.contents ul ul{margin:0 0 0 2em;padding:0}
+details.contents li{margin-bottom:0;padding:2px 0}
+details.contents li a{display:block;padding:11px 0;font-family:system-ui,sans-serif;font-size:var(--fs-toc);line-height:var(--lh-toc)}
+details.contents .tocnumber,details.contents .toctext,details.contents .toccount{display:table-cell;text-decoration:inherit}
+details.contents .tocnumber{padding-right:0.5em;color:#000}
+details.contents .toccount{padding-left:0.5em;color:#202122;text-decoration:none}
+footer.site{font-family:system-ui,sans-serif;font-size:var(--fs-footer);line-height:var(--lh-footer);margin-top:24px;color:#54595d}
+footer.site .last-edited{background:#eaecf0;margin:0 calc(50% - 50vw);padding:12px calc(50vw - 50%);font-size:var(--fs-footer);line-height:var(--lh-footer);font-weight:bold;color:#202122}
+footer.site .last-edited .clock{font-size:16px;font-weight:normal}
+ol.references{font-size:var(--fs-ref);line-height:var(--lh-ref);list-style:none;padding-left:0}
+ol.references li{display:flex;overflow-wrap:break-word;padding:4px 0}
+ol.references .refnum{flex:none;color:#3366cc;font-size:var(--fs-refnum);line-height:var(--lh-ref);padding-right:8px}
+ol.references .backlink{flex:none;padding-right:8px}
+ol.references .reftext{flex:1;min-width:0}
+.bug-overlay{position:fixed;inset:0;display:none;align-items:flex-start;justify-content:center;padding:24px 12px;z-index:10;overflow-y:auto}
 .bug-overlay:target{display:flex}
-.bug-box{background:#fff;max-width:480px;width:100%;padding:16px;border:1px solid #54595d;font-family:system-ui,sans-serif;font-size:14px;line-height:20px}
+.bug-box{background:#fff;max-width:480px;width:100%;padding:16px;border:1px solid #a2a9b1;font-family:system-ui,sans-serif;font-size:var(--fs-body);line-height:var(--lh-body)}
 .bug-box label{display:block;margin:10px 0 4px;font-weight:bold}
 .bug-box input,.bug-box textarea{width:100%;box-sizing:border-box;font:inherit;padding:6px;border:1px solid #72777d}
 .bug-box textarea{min-height:120px}
-.bug-box button{font:inherit;padding:8px 16px;margin:12px 8px 0 0}
+.bug-box button{font:inherit;font-size:var(--fs-notice);padding:12px 10px;margin:12px 8px 0 0;border:1px solid #3366cc;color:#3366cc;background:#fff}
 .bug-box .gotcha{display:none}
+@media (prefers-color-scheme: dark){body{background:#202122;color:#eaecf0}a{color:#88a3e8}a:visited{color:#88a3e8}h1,h2,h3,h4{color:#f8f9fa}header.site{background:#101418}header.site nav a[aria-current="page"]{color:#eaecf0}details.contents{background:#101418}details.contents li a{color:#eaecf0}details.contents .tocnumber{color:#eaecf0}details.contents .toccount{color:#eaecf0}ol.references{color:#eaecf0}ol.references .refnum{color:#88a3e8}p.notice{background:#101418;color:#eaecf0}footer.site{color:#eaecf0}footer.site .last-edited{background:#101418;color:#eaecf0}details.section summary .chevron,details.contents summary .chevron{color:#eaecf0}.bug-box{background:#202122;color:#eaecf0}.bug-box input,.bug-box textarea{background:#202122;color:#eaecf0}.bug-box button{border-color:#88a3e8;color:#88a3e8;background:#202122}.text-size-control select{background:#202122;color:#eaecf0}}
+@media print{header.site{display:none}.bug-overlay{display:none!important}a{text-decoration:underline}}
 </style>
+<script>(function(){try{var v=localStorage.getItem("eds-text-size");if(v==="small"||v==="large"||v==="xl"||v==="huge"){document.documentElement.classList.add("text-"+v);}}catch(e){}})();document.addEventListener("DOMContentLoaded",function(){var s=document.getElementById("text-size");if(!s)return;try{var v=localStorage.getItem("eds-text-size");if(v)s.value=v;}catch(e){}s.addEventListener("change",function(){var v=s.value;var h=document.documentElement;h.classList.remove("text-small","text-large","text-xl","text-huge");if(v!=="standard")h.classList.add("text-"+v);try{localStorage.setItem("eds-text-size",v);}catch(e){}});});</script>
 </head>
 <body>
 <header class="site"><nav aria-label="Years">
-<a href="years.html">Years</a>
+<a href="index.html">Years</a>
 <a href="2026.html" aria-current="page">2026</a>
 <a href="2025.html">2025</a>
-</nav></header>
+</nav>
+<div class="text-size-control"><label for="text-size">Text size</label><select id="text-size"><option value="small">Small</option><option value="standard" selected>Standard</option><option value="large">Large</option><option value="xl">Extra large</option><option value="huge">Huge</option></select></div>
+</header>
+<main>
 <h1>EDS research 2026</h1>
-<p class="notice">This is research information only, not medical advice.</p>
-<details class="contents">
-<summary><span class="chevron" aria-hidden="true"></span>Contents</summary>
+<p class="notice"><svg class="notice-icon" aria-hidden="true" viewBox="0 0 62 62" width="40" height="40"><defs><radialGradient id="notice-shadow"><stop offset="0" stop-color="silver"/><stop offset=".88" stop-color="silver"/><stop offset="1" stop-color="silver" stop-opacity="0"/></radialGradient><linearGradient id="notice-blue" x1="42.986" x2="22.014" y1="7.013" y2="51.987" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#9ecefe"/><stop offset="1" stop-color="#1388ee"/></linearGradient><linearGradient id="notice-edge" x1="54.51" x2="9.547" y1="41.179" y2="16.249" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#1976d9"/><stop offset="1" stop-color="#3e73d3"/></linearGradient></defs><circle cx="32.5" cy="29.5" r="26.5" fill="url(#notice-shadow)" transform="matrix(1.0648 0 0 1.06482 -2.1 1.086)"/><circle cx="31" cy="31" r="25.8" fill="url(#notice-blue)" stroke="url(#notice-edge)" stroke-width="2"/><path fill="#fff" d="M23 25h12v19h4v4H23v-4h4V28h-4v-3z"/><circle cx="31" cy="17" r="4" fill="#fff"/><path fill="#fff" d="M54.02 40.251a24.823 24.824 0 1 1 .181-.463" opacity=".08"/></svg><span>This is research information only, not medical advice.</span></p>
+<p>Every entry here is research about Ehlers-Danlos syndrome (EDS), or about a related condition as it relates to EDS. This is research information only, not medical advice.</p>
+<p><a href="index.html">Ehlers-Danlos syndrome research</a> is the index of years. This page covers 2026 only.</p>
+<details class="contents toc" open>
+<summary><span class="chevron" aria-hidden="true"></span><h2>Contents</h2><span class="toctoggle" aria-hidden="true"></span></summary>
 <ul>
-<li><a href="#november-2026">November 2026</a></li>
-<li><a href="#october-2026">October 2026</a></li>
+<li><a href="#november-2026"><span class="tocnumber">1</span> <span class="toctext">November 2026</span><span class="toccount"> (14 entries)</span></a>
+<ul>
+<li><a href="#november-2026-ehlers-danlos-syndrome"><span class="tocnumber">1.1</span> <span class="toctext">Ehlers-Danlos syndrome</span></a></li>
+<li><a href="#november-2026-cranial-cervical-instability"><span class="tocnumber">1.2</span> <span class="toctext">Cranial cervical instability</span></a></li>
+</ul></li>
+<li><a href="#october-2026"><span class="tocnumber">2</span> <span class="toctext">October 2026</span><span class="toccount"> (21 entries)</span></a>
+<ul>
+<li><a href="#october-2026-ehlers-danlos-syndrome"><span class="tocnumber">2.1</span> <span class="toctext">Ehlers-Danlos syndrome</span></a></li>
+<li><a href="#october-2026-cranial-cervical-instability"><span class="tocnumber">2.2</span> <span class="toctext">Cranial cervical instability</span></a></li>
+</ul></li>
+<li><a href="#references"><span class="tocnumber">3</span> <span class="toctext">References</span></a></li>
 </ul>
 </details>
-<p>Every entry here is research about Ehlers-Danlos syndrome (EDS), or about a related condition as it relates to EDS. This is research information only, not medical advice.</p>
-<p><a href="years.html">Ehlers-Danlos syndrome research</a> is the index of years. This page covers 2026 only.</p>
-<details class="section" open>
+<details class="section">
 <summary><span class="chevron" aria-hidden="true"></span><h2>November 2026</h2></summary>
 <span class="section-anchor" id="november-2026"></span>
-<details class="section subsection" open>
+<details class="section subsection">
 <summary><span class="chevron" aria-hidden="true"></span><h3>Ehlers-Danlos syndrome</h3></summary>
+<span class="section-anchor" id="november-2026-ehlers-danlos-syndrome"></span>
 <ul>
-<li><a href="https://www.frontiersin.org/journals/neurology/articles/10.3389/fneur.2026.1888481/full">"Expanding neurologic phenotypes in Ehlers-Danlos syndromes: a narrative review."</a> Narrative review of 56 publications covering autonomic dysfunction, small fiber neuropathy, and structural neurologic complications including craniocervical instability; CCI diagnosis in EDS remains controversial, with proposed thresholds (clivo-axial angle under 135 degrees, Harris over 12 mm, Grabb-Oakes over 9 mm) not universally validated.<sup><a href="#ref-1">[1]</a></sup></li>
-<li><a href="https://doi.org/10.3389/fneur.2026.1948115/full">"Clinical characteristics of postural tachycardia syndrome with and without hypermobile Ehlers-Danlos syndrome: a pilot study."</a> Retrospective pilot of 21 patients with POTS, 4 of whom also had hEDS; small sample, hypothesis-generating.<sup><a href="#ref-2">[2]</a></sup></li>
-<li>"Zevra Therapeutics Reports Third Quarter 2026 Financial Results and Corporate Update." Company announcement, not a peer-reviewed journal article. The Phase 3 DiSCOVER trial of celiprolol for vascular EDS enrolled six patients in Q3 2026, bringing total enrollment to 72.<sup><a href="#ref-3">[3]</a></sup></li>
-<li>"More common than we thought: Hypermobile Ehlers-Danlos Syndrome, comorbidity burden, and long COVID risk in a national cohort."<sup><a href="#ref-4">[4]</a></sup></li>
-<li>"Prevalence of generalized joint hypermobility, hypermobility spectrum disorders and Ehlers-Danlos syndrome: systematic review and meta-analysis." Systematic review and meta-analysis of 17 studies.<sup><a href="#ref-5">[5]</a></sup></li>
-<li>"Early-onset severe dilated cardiomyopathy in a child with COL5A1 and ABCC9 variants: a possible complex genetic contribution." Single case report.<sup><a href="#ref-6">[6]</a></sup></li>
-<li><a href="https://doi.org/10.1136/openhrt-2026-004552">"Sex-associated territory-specific vascular phenotypes in genetically confirmed vascular Ehlers-Danlos syndrome."</a><sup><a href="#ref-7">[7]</a></sup></li>
-<li>"Hypermobile Ehlers-Danlos syndrome with an intracranial aneurysm." Single case report.<sup><a href="#ref-8">[8]</a></sup></li>
-<li><a href="http://mdpi.com/2075-4426/16/11/559">"When Connective Tissue Becomes Neurological: A Perspective on Structural Vulnerability, Dynamic Pathology, and the Nervous System."</a> A perspective on connective tissue, the nervous system, and structural vulnerability; it critically appraises CCI imaging and surgical series.<sup><a href="#ref-9">[9]</a></sup></li>
-<li>"Interpreting the time course of lidocaine effectiveness in Ehlers-Danlos syndrome." Letter to the editor, not original research.<sup><a href="#ref-10">[10]</a></sup></li>
-<li><a href="https://www.jvascsurg.org/inpress?pageStart=0">"Femoral Artery Access Outcomes and Technical Considerations in Vascular Ehlers-Danlos Syndrome."</a><sup><a href="#ref-11">[11]</a></sup></li>
-<li><a href="https://doi.org/10.5056/jnm26015">"Unraveling Gastrointestinal Symptoms in Hypermobile Ehlers-Danlos Syndrome."</a><sup><a href="#ref-12">[12]</a></sup></li>
-<li>"Pain, but not hypermobility, is associated with borderline personality disorder symptoms among individuals diagnosed with EDS or G-HSD."<sup><a href="#ref-13">[13]</a></sup></li>
-<li><a href="https://doi.org/10.1002/nau.70504">"Joint Hypermobility and Female Lower Urinary Tract Symptoms: A Systematic Review."</a> Systematic review of 15 studies.<sup><a href="#ref-14">[14]</a></sup></li>
+<li><a href="https://www.frontiersin.org/journals/neurology/articles/10.3389/fneur.2026.1888481/full">"Expanding neurologic phenotypes in Ehlers-Danlos syndromes: a narrative review."</a> Narrative review of 56 publications covering autonomic dysfunction, small fiber neuropathy, and structural neurologic complications including craniocervical instability; CCI diagnosis in EDS remains controversial, with proposed thresholds (clivo-axial angle under 135 degrees, Harris over 12 mm, Grabb-Oakes over 9 mm) not universally validated.<sup id="cite-1"><a href="#ref-1">[1]</a></sup></li>
+<li><a href="https://doi.org/10.3389/fneur.2026.1948115">"Clinical characteristics of postural tachycardia syndrome with and without hypermobile Ehlers-Danlos syndrome: a pilot study."</a> Retrospective pilot of 21 patients with POTS, 4 of whom also had hEDS; small sample, hypothesis-generating.<sup id="cite-2"><a href="#ref-2">[2]</a></sup></li>
+<li>"Zevra Therapeutics Reports Third Quarter 2026 Financial Results and Corporate Update." Company announcement, not a peer-reviewed journal article. The Phase 3 DiSCOVER trial of celiprolol for vascular EDS enrolled six patients in Q3 2026, bringing total enrollment to 72.<sup id="cite-3"><a href="#ref-3">[3]</a></sup></li>
+<li><a href="https://pubmed.ncbi.nlm.nih.gov/42986813/">"More common than we thought: Hypermobile Ehlers-Danlos Syndrome, comorbidity burden, and long COVID risk in a national cohort."</a><sup id="cite-4"><a href="#ref-4">[4]</a></sup></li>
+<li><a href="https://pubmed.ncbi.nlm.nih.gov/42986321/">"Prevalence of generalized joint hypermobility, hypermobility spectrum disorders and Ehlers-Danlos syndrome: systematic review and meta-analysis."</a> Systematic review and meta-analysis of 17 studies.<sup id="cite-5"><a href="#ref-5">[5]</a></sup></li>
+<li><a href="https://doi.org/10.1017/s1047951126124809">"Early-onset severe dilated cardiomyopathy in a child with COL5A1 and ABCC9 variants: a possible complex genetic contribution."</a> Single case report.<sup id="cite-6"><a href="#ref-6">[6]</a></sup></li>
+<li><a href="https://doi.org/10.1136/openhrt-2026-004552">"Sex-associated territory-specific vascular phenotypes in genetically confirmed vascular Ehlers-Danlos syndrome."</a><sup id="cite-7"><a href="#ref-7">[7]</a></sup></li>
+<li><a href="https://doi.org/10.1093/qjmed/hcag313">"Hypermobile Ehlers-Danlos syndrome with an intracranial aneurysm."</a> Single case report.<sup id="cite-8"><a href="#ref-8">[8]</a></sup></li>
+<li><a href="https://mdpi.com/2075-4426/16/11/559">"When Connective Tissue Becomes Neurological: A Perspective on Structural Vulnerability, Dynamic Pathology, and the Nervous System."</a> A perspective on connective tissue, the nervous system, and structural vulnerability; it critically appraises CCI imaging and surgical series.<sup id="cite-9"><a href="#ref-9">[9]</a></sup></li>
+<li><a href="https://doi.org/10.1136/rapm-2026-108633">"Interpreting the time course of lidocaine effectiveness in Ehlers-Danlos syndrome."</a> Letter to the editor, not original research.<sup id="cite-10"><a href="#ref-10">[10]</a></sup></li>
+<li><a href="https://www.jvascsurg.org/inpress?pageStart=0">"Femoral Artery Access Outcomes and Technical Considerations in Vascular Ehlers-Danlos Syndrome."</a><sup id="cite-11"><a href="#ref-11">[11]</a></sup></li>
+<li><a href="https://doi.org/10.5056/jnm26015">"Unraveling Gastrointestinal Symptoms in Hypermobile Ehlers-Danlos Syndrome."</a><sup id="cite-12"><a href="#ref-12">[12]</a></sup></li>
+<li><a href="https://doi.org/10.1007/s10880-026-10177-6">"Pain, but not hypermobility, is associated with borderline personality disorder symptoms among individuals diagnosed with EDS or G-HSD."</a><sup id="cite-13"><a href="#ref-13">[13]</a></sup></li>
+<li><a href="https://doi.org/10.1002/nau.70504">"Joint Hypermobility and Female Lower Urinary Tract Symptoms: A Systematic Review."</a> Systematic review of 15 studies.<sup id="cite-14"><a href="#ref-14">[14]</a></sup></li>
 </ul>
 </details>
-<details class="section subsection" open>
+<details class="section subsection">
 <summary><span class="chevron" aria-hidden="true"></span><h3>Cranial cervical instability</h3></summary>
+<span class="section-anchor" id="november-2026-cranial-cervical-instability"></span>
 <p class="no-items">No new CCI items were noted in November 2026.</p>
 </details>
 </details>
-<details class="section" open>
+<details class="section">
 <summary><span class="chevron" aria-hidden="true"></span><h2>October 2026</h2></summary>
 <span class="section-anchor" id="october-2026"></span>
-<details class="section subsection" open>
+<details class="section subsection">
 <summary><span class="chevron" aria-hidden="true"></span><h3>Ehlers-Danlos syndrome</h3></summary>
+<span class="section-anchor" id="october-2026-ehlers-danlos-syndrome"></span>
 <ul>
-<li>"Novellia Research Finds Health Systems Typically Miss a Third of an Ehlers-Danlos Patient's Medical History, Complicating Diagnosis and Research." Company research announcement, presented as Poster #IR026 at the NORD Rare Diseases and Orphan Products Breakthrough Summit; not a peer-reviewed journal article.<sup><a href="#ref-15">[15]</a></sup></li>
-<li><a href="https://cureus.com/articles/503865-physician-perspectives-surrounding-hypermobile-ehlers-danlos-syndrome">"Physician Perspectives Surrounding Hypermobile Ehlers-Danlos Syndrome."</a><sup><a href="#ref-16">[16]</a></sup></li>
-<li><a href="https://doi.org/10.1002/jgf2.70183">"Late Recognition of Suspected Ehlers-Danlos Syndrome After Recurrent Small-Bowel Perforations: A Case Report."</a> Case report.<sup><a href="#ref-17">[17]</a></sup></li>
-<li>"Researchers Link Fragile X Premutation to EDS Phenotype." Secondary report of a pilot study; no journal or primary study citation was given, so this is logged here but not presented as confirmed research.<sup><a href="#ref-18">[18]</a></sup></li>
-<li><a href="https://doi.org/10.3390/jcm14165636">"Defining the chronic complexities of hEDS and HSD."</a><sup><a href="#ref-19">[19]</a></sup></li>
-<li><a href="https://doi.org/10.1016/j.isci.2025.113343">"KLK15 alters connective tissues in hypermobile Ehlers-Danlos syndrome."</a> KLK15 identified as a novel disease gene candidate in hypermobile EDS. Also listed in the check log as the ScienceDirect KLK15 item; same paper.<sup><a href="#ref-20">[20]</a></sup></li>
-<li><a href="https://doi.org/10.1093/immhor/vlaf044">"Proteomic discoveries in hypermobile Ehlers-Danlos syndrome."</a><sup><a href="#ref-21">[21]</a></sup></li>
-<li><a href="https://doi.org/10.1117/1.BIOS.3.1.015002">"Label-free differentiation of classical and hypermobile Ehlers-Danlos syndromes using Mueller matrix polarimetry."</a> Mueller matrix polarimetry distinguishing classical and hypermobile EDS.<sup><a href="#ref-22">[22]</a></sup></li>
-<li><a href="https://doi.org/10.1136/rapm-2026-107817">"Association between Ehlers-Danlos syndrome and complex regional pain syndrome: a large nationwide claims database study."</a> Large nationwide claims database study.<sup><a href="#ref-23">[23]</a></sup></li>
-<li><a href="https://doi.org/10.1371/journal.pone.0357565">"Exploring cross-category relationships between symptoms in people with hypermobile EDS (hEDS) to identify disability patterns."</a><sup><a href="#ref-24">[24]</a></sup></li>
-<li><a href="https://doi.org/10.1007/s11325-026-03763-3">"Obstructive sleep apnea and CPAP efficacy in patients with hypermobile Ehlers-Danlos syndrome and hypermobility spectrum disorder."</a> Case-control study of obstructive sleep apnea and CPAP efficacy in hEDS and HSD.<sup><a href="#ref-25">[25]</a></sup></li>
-<li><a href="https://doi.org/10.1016/j.jsbmb.2026.107090">"Lower androgen sulfate metabolites in women with hypermobile Ehlers-Danlos syndrome."</a><sup><a href="#ref-26">[26]</a></sup></li>
-<li><a href="https://doi.org/10.70278/aanaj/.0000001099">"Anesthesia Clinical Practice Guidelines for Ehlers-Danlos Syndrome: A Modified Delphi Survey."</a> First consensus-based anesthesia practice guidelines for EDS.<sup><a href="#ref-27">[27]</a></sup></li>
-<li>"A Major Update Is Coming to EDS and HSD Diagnosis." Updated EDS/HSD diagnostic criteria to be published in the American Journal of Medical Genetics in December 2026, with care and management pathways in March 2027.<sup><a href="#ref-28">[28]</a></sup></li>
-<li>"New Model of Care for EDS and HSD." Model of Care work tied to Road to 2026.<sup><a href="#ref-29">[29]</a></sup></li>
-<li>"Research Roundup: New Research in EDS and HSD." A roundup covering several studies, not a single article.<sup><a href="#ref-30">[30]</a></sup></li>
+<li>"Novellia Research Finds Health Systems Typically Miss a Third of an Ehlers-Danlos Patient's Medical History, Complicating Diagnosis and Research." Company research announcement, presented as Poster #IR026 at the NORD Rare Diseases and Orphan Products Breakthrough Summit; not a peer-reviewed journal article.<sup id="cite-15"><a href="#ref-15">[15]</a></sup></li>
+<li><a href="https://doi.org/10.7759/cureus.118673">"Physician Perspectives Surrounding Hypermobile Ehlers-Danlos Syndrome."</a><sup id="cite-16"><a href="#ref-16">[16]</a></sup></li>
+<li><a href="https://doi.org/10.1002/jgf2.70183">"Late Recognition of Suspected Ehlers-Danlos Syndrome After Recurrent Small-Bowel Perforations: A Case Report."</a> Case report.<sup id="cite-17"><a href="#ref-17">[17]</a></sup></li>
+<li>"Researchers Link Fragile X Premutation to EDS Phenotype." Secondary report of a pilot study; no journal or primary study citation was given, so this is logged here but not presented as confirmed research.<sup id="cite-18"><a href="#ref-18">[18]</a></sup></li>
+<li><a href="https://doi.org/10.3390/jcm14165636">"Defining the chronic complexities of hEDS and HSD."</a><sup id="cite-19"><a href="#ref-19">[19]</a></sup></li>
+<li><a href="https://doi.org/10.1016/j.isci.2025.113343">"KLK15 alters connective tissues in hypermobile Ehlers-Danlos syndrome."</a> KLK15 identified as a novel disease gene candidate in hypermobile EDS. Also listed in the check log as the ScienceDirect KLK15 item; same paper.<sup id="cite-20"><a href="#ref-20">[20]</a></sup></li>
+<li><a href="https://doi.org/10.1093/immhor/vlaf044">"Proteomic discoveries in hypermobile Ehlers-Danlos syndrome."</a><sup id="cite-21"><a href="#ref-21">[21]</a></sup></li>
+<li><a href="https://doi.org/10.1117/1.BIOS.3.1.015002">"Label-free differentiation of classical and hypermobile Ehlers-Danlos syndromes using Mueller matrix polarimetry."</a> Mueller matrix polarimetry distinguishing classical and hypermobile EDS.<sup id="cite-22"><a href="#ref-22">[22]</a></sup></li>
+<li><a href="https://doi.org/10.1136/rapm-2026-107817">"Association between Ehlers-Danlos syndrome and complex regional pain syndrome: a large nationwide claims database study."</a> Large nationwide claims database study.<sup id="cite-23"><a href="#ref-23">[23]</a></sup></li>
+<li><a href="https://doi.org/10.1371/journal.pone.0357565">"Exploring cross-category relationships between symptoms in people with hypermobile EDS (hEDS) to identify disability patterns."</a><sup id="cite-24"><a href="#ref-24">[24]</a></sup></li>
+<li><a href="https://doi.org/10.1007/s11325-026-03763-3">"Obstructive sleep apnea and CPAP efficacy in patients with hypermobile Ehlers-Danlos syndrome and hypermobility spectrum disorder."</a> Case-control study of obstructive sleep apnea and CPAP efficacy in hEDS and HSD.<sup id="cite-25"><a href="#ref-25">[25]</a></sup></li>
+<li><a href="https://doi.org/10.1016/j.jsbmb.2026.107090">"Lower androgen sulfate metabolites in women with hypermobile Ehlers-Danlos syndrome."</a><sup id="cite-26"><a href="#ref-26">[26]</a></sup></li>
+<li><a href="https://doi.org/10.70278/aanaj/.0000001099">"Anesthesia Clinical Practice Guidelines for Ehlers-Danlos Syndrome: A Modified Delphi Survey."</a> First consensus-based anesthesia practice guidelines for EDS.<sup id="cite-27"><a href="#ref-27">[27]</a></sup></li>
+<li>"A Major Update Is Coming to EDS and HSD Diagnosis." Updated EDS/HSD diagnostic criteria to be published in the American Journal of Medical Genetics in December 2026, with care and management pathways in March 2027.<sup id="cite-28"><a href="#ref-28">[28]</a></sup></li>
+<li>"New Model of Care for EDS and HSD." Model of Care work tied to Road to 2026.<sup id="cite-29"><a href="#ref-29">[29]</a></sup></li>
+<li>"Research Roundup: New Research in EDS and HSD." A roundup covering several studies, not a single article.<sup id="cite-30"><a href="#ref-30">[30]</a></sup></li>
 </ul>
 </details>
-<details class="section subsection" open>
+<details class="section subsection">
 <summary><span class="chevron" aria-hidden="true"></span><h3>Cranial cervical instability</h3></summary>
+<span class="section-anchor" id="october-2026-cranial-cervical-instability"></span>
 <ul>
-<li><a href="https://www.frontiersin.org/journals/neuroscience/articles/10.3389/fnins.2026.1967117/full">"Evaluating the role of craniocervical and atlantoaxial instability in autonomic dysfunction: a narrative review."</a> Narrative review of 43 studies.<sup><a href="#ref-31">[31]</a></sup></li>
-<li><a href="https://pubmed.ncbi.nlm.nih.gov/41872801/">"Craniocervical instability after inadvertent neck hyperextension in Ehlers-Danlos syndrome: a retrospective case series and literature review."</a> Eight hEDS patients developing CCI symptoms after procedures involving neck hyperextension.<sup><a href="#ref-32">[32]</a></sup></li>
-<li><a href="https://pubmed.ncbi.nlm.nih.gov/38163828/">"Craniocervical instability in patients with Ehlers-Danlos syndromes: outcomes analysis following occipito-cervical fusion."</a> Retrospective outcomes analysis of 53 EDS patients undergoing occipito-cervical fusion.<sup><a href="#ref-33">[33]</a></sup></li>
-<li><a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC9609512/">"Craniocervical Instability in Ehlers-Danlos Syndrome, A Systematic Review of Diagnostic and Surgical Treatment Criteria."</a> Systematic review.<sup><a href="#ref-34">[34]</a></sup></li>
-<li><a href="https://www.journalmc.org/index.php/JMC/article/view/3792/3148">"Cervicogenic Dizziness Associated With Craniocervical Instability: A Case Report."</a> Case report linking cervicogenic dizziness to CCI and clivo-axial angle correction.<sup><a href="#ref-35">[35]</a></sup></li>
+<li><a href="https://www.frontiersin.org/journals/neuroscience/articles/10.3389/fnins.2026.1967117/full">"Evaluating the role of craniocervical and atlantoaxial instability in autonomic dysfunction: a narrative review."</a> Narrative review of 43 studies.<sup id="cite-31"><a href="#ref-31">[31]</a></sup></li>
+<li><a href="https://pubmed.ncbi.nlm.nih.gov/41872801/">"Craniocervical instability after inadvertent neck hyperextension in Ehlers-Danlos syndrome: a retrospective case series and literature review."</a> Eight hEDS patients developing CCI symptoms after procedures involving neck hyperextension.<sup id="cite-32"><a href="#ref-32">[32]</a></sup></li>
+<li><a href="https://pubmed.ncbi.nlm.nih.gov/38163828/">"Craniocervical instability in patients with Ehlers-Danlos syndromes: outcomes analysis following occipito-cervical fusion."</a> Retrospective outcomes analysis of 53 EDS patients undergoing occipito-cervical fusion.<sup id="cite-33"><a href="#ref-33">[33]</a></sup></li>
+<li><a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC9609512/">"Craniocervical Instability in Ehlers-Danlos Syndrome, A Systematic Review of Diagnostic and Surgical Treatment Criteria."</a> Systematic review.<sup id="cite-34"><a href="#ref-34">[34]</a></sup></li>
+<li><a href="https://www.journalmc.org/index.php/JMC/article/view/3792/3148">"Cervicogenic Dizziness Associated With Craniocervical Instability: A Case Report."</a> Case report linking cervicogenic dizziness to CCI and clivo-axial angle correction.<sup id="cite-35"><a href="#ref-35">[35]</a></sup></li>
 </ul>
 </details>
 </details>
-<h2 class="references-heading">References</h2>
+<details class="section references">
+<summary><span class="chevron" aria-hidden="true"></span><h2 class="references-heading">References</h2></summary>
+<span class="section-anchor" id="references"></span>
 <ol class="references">
-<li id="ref-1">(2026). "Expanding neurologic phenotypes in Ehlers-Danlos syndromes: a narrative review". DOI 10.3389/fneur.2026.1888481. Original article: <a href="https://www.frontiersin.org/journals/neurology/articles/10.3389/fneur.2026.1888481/full">https://www.frontiersin.org/journals/neurology/articles/10.3389/fneur.2026.1888481/full</a></li>
-<li id="ref-2">Hirosawa H, Nakane S, et al. (2026). "Clinical characteristics of postural tachycardia syndrome with and without hypermobile Ehlers-Danlos syndrome: a pilot study". DOI 10.3389/fneur.2026.1948115. Original article: <a href="https://doi.org/10.3389/fneur.2026.1948115/full">https://doi.org/10.3389/fneur.2026.1948115/full</a></li>
-<li id="ref-3">Zevra Therapeutics (2026). "Zevra Therapeutics Reports Third Quarter 2026 Financial Results and Corporate Update". Company announcement, not a peer-reviewed journal article. No original article link.</li>
-<li id="ref-4">Pearson ML, Laraway BJ, et al. (2026). "More common than we thought: Hypermobile Ehlers-Danlos Syndrome, comorbidity burden, and long COVID risk in a national cohort". PMID 42986813. Original article link not yet found.</li>
-<li id="ref-5">Carnerup I, Bondesson E, et al. (2026). "Prevalence of generalized joint hypermobility, hypermobility spectrum disorders and Ehlers-Danlos syndrome: systematic review and meta-analysis". PMID 42986321. Original article link not yet found.</li>
-<li id="ref-6">"Early-onset severe dilated cardiomyopathy in a child with COL5A1 and ABCC9 variants: a possible complex genetic contribution" (2026). Original article link not yet found.</li>
-<li id="ref-7">Abdul Nabi H, Dreher LA, et al. (2026). "Sex-associated territory-specific vascular phenotypes in genetically confirmed vascular Ehlers-Danlos syndrome". DOI 10.1136/openhrt-2026-004552. Original article: <a href="https://doi.org/10.1136/openhrt-2026-004552">https://doi.org/10.1136/openhrt-2026-004552</a></li>
-<li id="ref-8">Zou Y, Zhang T, et al. (2026). "Hypermobile Ehlers-Danlos syndrome with an intracranial aneurysm". Original article link not yet found.</li>
-<li id="ref-9">"When Connective Tissue Becomes Neurological: A Perspective on Structural Vulnerability, Dynamic Pathology, and the Nervous System" (2026). Original article: <a href="http://mdpi.com/2075-4426/16/11/559">http://mdpi.com/2075-4426/16/11/559</a></li>
-<li id="ref-10">AlShtait SS (2026). "Interpreting the time course of lidocaine effectiveness in Ehlers-Danlos syndrome". Original article link not yet found.</li>
-<li id="ref-11">Lian T, Davis A, Griffith G, Minoza K, Kaufman C, Shalhub S (2026). "Femoral Artery Access Outcomes and Technical Considerations in Vascular Ehlers-Danlos Syndrome". Original article: <a href="https://www.jvascsurg.org/inpress?pageStart=0">https://www.jvascsurg.org/inpress?pageStart=0</a></li>
-<li id="ref-12">Levin R, Gazit Y, Carter D (2026). "Unraveling Gastrointestinal Symptoms in Hypermobile Ehlers-Danlos Syndrome". DOI 10.5056/jnm26015. Original article: <a href="https://doi.org/10.5056/jnm26015">https://doi.org/10.5056/jnm26015</a></li>
-<li id="ref-13">Williams CM et al. (2026). "Pain, but not hypermobility, is associated with borderline personality disorder symptoms among individuals diagnosed with EDS or G-HSD". Original article link not yet found.</li>
-<li id="ref-14">Kuroda K, Ito K (2026). "Joint Hypermobility and Female Lower Urinary Tract Symptoms: A Systematic Review". DOI 10.1002/nau.70504. Original article: <a href="https://doi.org/10.1002/nau.70504">https://doi.org/10.1002/nau.70504</a></li>
-<li id="ref-15">Novellia (2026). "Novellia Research Finds Health Systems Typically Miss a Third of an Ehlers-Danlos Patient's Medical History, Complicating Diagnosis and Research". No original article link.</li>
-<li id="ref-16">"Physician Perspectives Surrounding Hypermobile Ehlers-Danlos Syndrome" (2026). Original article: <a href="https://cureus.com/articles/503865-physician-perspectives-surrounding-hypermobile-ehlers-danlos-syndrome">https://cureus.com/articles/503865-physician-perspectives-surrounding-hypermobile-ehlers-danlos-syndrome</a></li>
-<li id="ref-17">Horiguchi N et al. (2026). "Late Recognition of Suspected Ehlers-Danlos Syndrome After Recurrent Small-Bowel Perforations: A Case Report". DOI 10.1002/jgf2.70183. Original article: <a href="https://doi.org/10.1002/jgf2.70183">https://doi.org/10.1002/jgf2.70183</a></li>
-<li id="ref-18">Wisevoter (2026). "Researchers Link Fragile X Premutation to EDS Phenotype". No original article link.</li>
-<li id="ref-19">Daylor V et al. (2025). "Defining the chronic complexities of hEDS and HSD". DOI 10.3390/jcm14165636. Original article: <a href="https://doi.org/10.3390/jcm14165636">https://doi.org/10.3390/jcm14165636</a></li>
-<li id="ref-20">Gensemer C et al. (2025). "KLK15 alters connective tissues in hypermobile Ehlers-Danlos syndrome". DOI 10.1016/j.isci.2025.113343. Original article: <a href="https://doi.org/10.1016/j.isci.2025.113343">https://doi.org/10.1016/j.isci.2025.113343</a></li>
-<li id="ref-21">Griggs M et al. (2025). "Proteomic discoveries in hypermobile Ehlers-Danlos syndrome". DOI 10.1093/immhor/vlaf044. Original article: <a href="https://doi.org/10.1093/immhor/vlaf044">https://doi.org/10.1093/immhor/vlaf044</a></li>
-<li id="ref-22">Tumanova K et al. (2026). "Label-free differentiation of classical and hypermobile Ehlers-Danlos syndromes using Mueller matrix polarimetry". DOI 10.1117/1.BIOS.3.1.015002. Original article: <a href="https://doi.org/10.1117/1.BIOS.3.1.015002">https://doi.org/10.1117/1.BIOS.3.1.015002</a></li>
-<li id="ref-23">Ren R et al. (2026). "Association between Ehlers-Danlos syndrome and complex regional pain syndrome: a large nationwide claims database study". DOI 10.1136/rapm-2026-107817. Original article: <a href="https://doi.org/10.1136/rapm-2026-107817">https://doi.org/10.1136/rapm-2026-107817</a></li>
-<li id="ref-24">Andrews J et al. (2026). "Exploring cross-category relationships between symptoms in people with hypermobile EDS (hEDS) to identify disability patterns". DOI 10.1371/journal.pone.0357565. Original article: <a href="https://doi.org/10.1371/journal.pone.0357565">https://doi.org/10.1371/journal.pone.0357565</a></li>
-<li id="ref-25">Zhang KL et al. (2026). "Obstructive sleep apnea and CPAP efficacy in patients with hypermobile Ehlers-Danlos syndrome and hypermobility spectrum disorder". DOI 10.1007/s11325-026-03763-3. Original article: <a href="https://doi.org/10.1007/s11325-026-03763-3">https://doi.org/10.1007/s11325-026-03763-3</a></li>
-<li id="ref-26">Hannon SL et al. (2026). "Lower androgen sulfate metabolites in women with hypermobile Ehlers-Danlos syndrome". DOI 10.1016/j.jsbmb.2026.107090. Original article: <a href="https://doi.org/10.1016/j.jsbmb.2026.107090">https://doi.org/10.1016/j.jsbmb.2026.107090</a></li>
-<li id="ref-27">Amaral D et al. (2026). "Anesthesia Clinical Practice Guidelines for Ehlers-Danlos Syndrome: A Modified Delphi Survey". DOI 10.70278/aanaj/.0000001099. Original article: <a href="https://doi.org/10.70278/aanaj/.0000001099">https://doi.org/10.70278/aanaj/.0000001099</a></li>
-<li id="ref-28">The Ehlers-Danlos Society (2026). "A Major Update Is Coming to EDS and HSD Diagnosis". No article exists yet.</li>
-<li id="ref-29">The Ehlers-Danlos Society (2026). "New Model of Care for EDS and HSD". No article exists yet.</li>
-<li id="ref-30">The Ehlers-Danlos Society. "Research Roundup: New Research in EDS and HSD". No single original link.</li>
-<li id="ref-31">"Evaluating the role of craniocervical and atlantoaxial instability in autonomic dysfunction: a narrative review" (2026). DOI 10.3389/fnins.2026.1967117. Original article: <a href="https://www.frontiersin.org/journals/neuroscience/articles/10.3389/fnins.2026.1967117/full">https://www.frontiersin.org/journals/neuroscience/articles/10.3389/fnins.2026.1967117/full</a></li>
-<li id="ref-32">"Craniocervical instability after inadvertent neck hyperextension in Ehlers-Danlos syndrome: a retrospective case series and literature review". Original article: <a href="https://pubmed.ncbi.nlm.nih.gov/41872801/">https://pubmed.ncbi.nlm.nih.gov/41872801/</a></li>
-<li id="ref-33">"Craniocervical instability in patients with Ehlers-Danlos syndromes: outcomes analysis following occipito-cervical fusion". Original article: <a href="https://pubmed.ncbi.nlm.nih.gov/38163828/">https://pubmed.ncbi.nlm.nih.gov/38163828/</a></li>
-<li id="ref-34">"Craniocervical Instability in Ehlers-Danlos Syndrome, A Systematic Review of Diagnostic and Surgical Treatment Criteria". Original article: <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC9609512/">https://pmc.ncbi.nlm.nih.gov/articles/PMC9609512/</a></li>
-<li id="ref-35">"Cervicogenic Dizziness Associated With Craniocervical Instability: A Case Report". Original article: <a href="https://www.journalmc.org/index.php/JMC/article/view/3792/3148">https://www.journalmc.org/index.php/JMC/article/view/3792/3148</a></li>
+<li id="ref-1"><span class="refnum">[1]</span><a class="backlink" href="#cite-1">^</a><span class="reftext">(2026). "Expanding neurologic phenotypes in Ehlers-Danlos syndromes: a narrative review". DOI 10.3389/fneur.2026.1888481. Original article: <a href="https://www.frontiersin.org/journals/neurology/articles/10.3389/fneur.2026.1888481/full">https://www.frontiersin.org/journals/neurology/articles/10.3389/fneur.2026.1888481/full</a></span></li>
+<li id="ref-2"><span class="refnum">[2]</span><a class="backlink" href="#cite-2">^</a><span class="reftext">Hirosawa H, Nakane S, et al. (2026). "Clinical characteristics of postural tachycardia syndrome with and without hypermobile Ehlers-Danlos syndrome: a pilot study". DOI 10.3389/fneur.2026.1948115. Original article: <a href="https://doi.org/10.3389/fneur.2026.1948115">https://doi.org/10.3389/fneur.2026.1948115</a></span></li>
+<li id="ref-3"><span class="refnum">[3]</span><a class="backlink" href="#cite-3">^</a><span class="reftext">Zevra Therapeutics (2026). "Zevra Therapeutics Reports Third Quarter 2026 Financial Results and Corporate Update". Company announcement, not a peer-reviewed journal article. No original article link.</span></li>
+<li id="ref-4"><span class="refnum">[4]</span><a class="backlink" href="#cite-4">^</a><span class="reftext">Pearson ML, Laraway BJ, et al. (2026). "More common than we thought: Hypermobile Ehlers-Danlos Syndrome, comorbidity burden, and long COVID risk in a national cohort". PMID 42986813. Original article: <a href="https://pubmed.ncbi.nlm.nih.gov/42986813/">https://pubmed.ncbi.nlm.nih.gov/42986813/</a></span></li>
+<li id="ref-5"><span class="refnum">[5]</span><a class="backlink" href="#cite-5">^</a><span class="reftext">Carnerup I, Bondesson E, et al. (2026). "Prevalence of generalized joint hypermobility, hypermobility spectrum disorders and Ehlers-Danlos syndrome: systematic review and meta-analysis". PMID 42986321. Original article: <a href="https://pubmed.ncbi.nlm.nih.gov/42986321/">https://pubmed.ncbi.nlm.nih.gov/42986321/</a></span></li>
+<li id="ref-6"><span class="refnum">[6]</span><a class="backlink" href="#cite-6">^</a><span class="reftext">"Early-onset severe dilated cardiomyopathy in a child with COL5A1 and ABCC9 variants: a possible complex genetic contribution" (2026). DOI 10.1017/s1047951126124809. Original article: <a href="https://doi.org/10.1017/s1047951126124809">https://doi.org/10.1017/s1047951126124809</a></span></li>
+<li id="ref-7"><span class="refnum">[7]</span><a class="backlink" href="#cite-7">^</a><span class="reftext">Abdul Nabi H, Dreher LA, et al. (2026). "Sex-associated territory-specific vascular phenotypes in genetically confirmed vascular Ehlers-Danlos syndrome". DOI 10.1136/openhrt-2026-004552. Original article: <a href="https://doi.org/10.1136/openhrt-2026-004552">https://doi.org/10.1136/openhrt-2026-004552</a></span></li>
+<li id="ref-8"><span class="refnum">[8]</span><a class="backlink" href="#cite-8">^</a><span class="reftext">Zou Y, Zhang T, et al. (2026). "Hypermobile Ehlers-Danlos syndrome with an intracranial aneurysm". DOI 10.1093/qjmed/hcag313. Original article: <a href="https://doi.org/10.1093/qjmed/hcag313">https://doi.org/10.1093/qjmed/hcag313</a></span></li>
+<li id="ref-9"><span class="refnum">[9]</span><a class="backlink" href="#cite-9">^</a><span class="reftext">"When Connective Tissue Becomes Neurological: A Perspective on Structural Vulnerability, Dynamic Pathology, and the Nervous System" (2026). Original article: <a href="https://mdpi.com/2075-4426/16/11/559">https://mdpi.com/2075-4426/16/11/559</a></span></li>
+<li id="ref-10"><span class="refnum">[10]</span><a class="backlink" href="#cite-10">^</a><span class="reftext">AlShtait SS (2026). "Interpreting the time course of lidocaine effectiveness in Ehlers-Danlos syndrome". DOI 10.1136/rapm-2026-108633. Original article: <a href="https://doi.org/10.1136/rapm-2026-108633">https://doi.org/10.1136/rapm-2026-108633</a></span></li>
+<li id="ref-11"><span class="refnum">[11]</span><a class="backlink" href="#cite-11">^</a><span class="reftext">Lian T, Davis A, Griffith G, Minoza K, Kaufman C, Shalhub S (2026). "Femoral Artery Access Outcomes and Technical Considerations in Vascular Ehlers-Danlos Syndrome". Original article: <a href="https://www.jvascsurg.org/inpress?pageStart=0">https://www.jvascsurg.org/inpress?pageStart=0</a></span></li>
+<li id="ref-12"><span class="refnum">[12]</span><a class="backlink" href="#cite-12">^</a><span class="reftext">Levin R, Gazit Y, Carter D (2026). "Unraveling Gastrointestinal Symptoms in Hypermobile Ehlers-Danlos Syndrome". DOI 10.5056/jnm26015. Original article: <a href="https://doi.org/10.5056/jnm26015">https://doi.org/10.5056/jnm26015</a></span></li>
+<li id="ref-13"><span class="refnum">[13]</span><a class="backlink" href="#cite-13">^</a><span class="reftext">Williams CM et al. (2026). "Pain, but not hypermobility, is associated with borderline personality disorder symptoms among individuals diagnosed with EDS or G-HSD". DOI 10.1007/s10880-026-10177-6. Original article: <a href="https://doi.org/10.1007/s10880-026-10177-6">https://doi.org/10.1007/s10880-026-10177-6</a></span></li>
+<li id="ref-14"><span class="refnum">[14]</span><a class="backlink" href="#cite-14">^</a><span class="reftext">Kuroda K, Ito K (2026). "Joint Hypermobility and Female Lower Urinary Tract Symptoms: A Systematic Review". DOI 10.1002/nau.70504. Original article: <a href="https://doi.org/10.1002/nau.70504">https://doi.org/10.1002/nau.70504</a></span></li>
+<li id="ref-15"><span class="refnum">[15]</span><a class="backlink" href="#cite-15">^</a><span class="reftext">Novellia (2026). "Novellia Research Finds Health Systems Typically Miss a Third of an Ehlers-Danlos Patient's Medical History, Complicating Diagnosis and Research". No original article link.</span></li>
+<li id="ref-16"><span class="refnum">[16]</span><a class="backlink" href="#cite-16">^</a><span class="reftext">"Physician Perspectives Surrounding Hypermobile Ehlers-Danlos Syndrome" (2026). DOI 10.7759/cureus.118673. Original article: <a href="https://doi.org/10.7759/cureus.118673">https://doi.org/10.7759/cureus.118673</a></span></li>
+<li id="ref-17"><span class="refnum">[17]</span><a class="backlink" href="#cite-17">^</a><span class="reftext">Horiguchi N et al. (2026). "Late Recognition of Suspected Ehlers-Danlos Syndrome After Recurrent Small-Bowel Perforations: A Case Report". DOI 10.1002/jgf2.70183. Original article: <a href="https://doi.org/10.1002/jgf2.70183">https://doi.org/10.1002/jgf2.70183</a></span></li>
+<li id="ref-18"><span class="refnum">[18]</span><a class="backlink" href="#cite-18">^</a><span class="reftext">Wisevoter (2026). "Researchers Link Fragile X Premutation to EDS Phenotype". No original article link.</span></li>
+<li id="ref-19"><span class="refnum">[19]</span><a class="backlink" href="#cite-19">^</a><span class="reftext">Daylor V et al. (2025). "Defining the chronic complexities of hEDS and HSD". DOI 10.3390/jcm14165636. Original article: <a href="https://doi.org/10.3390/jcm14165636">https://doi.org/10.3390/jcm14165636</a></span></li>
+<li id="ref-20"><span class="refnum">[20]</span><a class="backlink" href="#cite-20">^</a><span class="reftext">Gensemer C et al. (2025). "KLK15 alters connective tissues in hypermobile Ehlers-Danlos syndrome". DOI 10.1016/j.isci.2025.113343. Original article: <a href="https://doi.org/10.1016/j.isci.2025.113343">https://doi.org/10.1016/j.isci.2025.113343</a></span></li>
+<li id="ref-21"><span class="refnum">[21]</span><a class="backlink" href="#cite-21">^</a><span class="reftext">Griggs M et al. (2025). "Proteomic discoveries in hypermobile Ehlers-Danlos syndrome". DOI 10.1093/immhor/vlaf044. Original article: <a href="https://doi.org/10.1093/immhor/vlaf044">https://doi.org/10.1093/immhor/vlaf044</a></span></li>
+<li id="ref-22"><span class="refnum">[22]</span><a class="backlink" href="#cite-22">^</a><span class="reftext">Tumanova K et al. (2026). "Label-free differentiation of classical and hypermobile Ehlers-Danlos syndromes using Mueller matrix polarimetry". DOI 10.1117/1.BIOS.3.1.015002. Original article: <a href="https://doi.org/10.1117/1.BIOS.3.1.015002">https://doi.org/10.1117/1.BIOS.3.1.015002</a></span></li>
+<li id="ref-23"><span class="refnum">[23]</span><a class="backlink" href="#cite-23">^</a><span class="reftext">Ren R et al. (2026). "Association between Ehlers-Danlos syndrome and complex regional pain syndrome: a large nationwide claims database study". DOI 10.1136/rapm-2026-107817. Original article: <a href="https://doi.org/10.1136/rapm-2026-107817">https://doi.org/10.1136/rapm-2026-107817</a></span></li>
+<li id="ref-24"><span class="refnum">[24]</span><a class="backlink" href="#cite-24">^</a><span class="reftext">Andrews J et al. (2026). "Exploring cross-category relationships between symptoms in people with hypermobile EDS (hEDS) to identify disability patterns". DOI 10.1371/journal.pone.0357565. Original article: <a href="https://doi.org/10.1371/journal.pone.0357565">https://doi.org/10.1371/journal.pone.0357565</a></span></li>
+<li id="ref-25"><span class="refnum">[25]</span><a class="backlink" href="#cite-25">^</a><span class="reftext">Zhang KL et al. (2026). "Obstructive sleep apnea and CPAP efficacy in patients with hypermobile Ehlers-Danlos syndrome and hypermobility spectrum disorder". DOI 10.1007/s11325-026-03763-3. Original article: <a href="https://doi.org/10.1007/s11325-026-03763-3">https://doi.org/10.1007/s11325-026-03763-3</a></span></li>
+<li id="ref-26"><span class="refnum">[26]</span><a class="backlink" href="#cite-26">^</a><span class="reftext">Hannon SL et al. (2026). "Lower androgen sulfate metabolites in women with hypermobile Ehlers-Danlos syndrome". DOI 10.1016/j.jsbmb.2026.107090. Original article: <a href="https://doi.org/10.1016/j.jsbmb.2026.107090">https://doi.org/10.1016/j.jsbmb.2026.107090</a></span></li>
+<li id="ref-27"><span class="refnum">[27]</span><a class="backlink" href="#cite-27">^</a><span class="reftext">Amaral D et al. (2026). "Anesthesia Clinical Practice Guidelines for Ehlers-Danlos Syndrome: A Modified Delphi Survey". DOI 10.70278/aanaj/.0000001099. Original article: <a href="https://doi.org/10.70278/aanaj/.0000001099">https://doi.org/10.70278/aanaj/.0000001099</a></span></li>
+<li id="ref-28"><span class="refnum">[28]</span><a class="backlink" href="#cite-28">^</a><span class="reftext">The Ehlers-Danlos Society (2026). "A Major Update Is Coming to EDS and HSD Diagnosis". No article exists yet.</span></li>
+<li id="ref-29"><span class="refnum">[29]</span><a class="backlink" href="#cite-29">^</a><span class="reftext">The Ehlers-Danlos Society (2026). "New Model of Care for EDS and HSD". No article exists yet.</span></li>
+<li id="ref-30"><span class="refnum">[30]</span><a class="backlink" href="#cite-30">^</a><span class="reftext">The Ehlers-Danlos Society. "Research Roundup: New Research in EDS and HSD". No single original link.</span></li>
+<li id="ref-31"><span class="refnum">[31]</span><a class="backlink" href="#cite-31">^</a><span class="reftext">"Evaluating the role of craniocervical and atlantoaxial instability in autonomic dysfunction: a narrative review" (2026). DOI 10.3389/fnins.2026.1967117. Original article: <a href="https://www.frontiersin.org/journals/neuroscience/articles/10.3389/fnins.2026.1967117/full">https://www.frontiersin.org/journals/neuroscience/articles/10.3389/fnins.2026.1967117/full</a></span></li>
+<li id="ref-32"><span class="refnum">[32]</span><a class="backlink" href="#cite-32">^</a><span class="reftext">"Craniocervical instability after inadvertent neck hyperextension in Ehlers-Danlos syndrome: a retrospective case series and literature review". Original article: <a href="https://pubmed.ncbi.nlm.nih.gov/41872801/">https://pubmed.ncbi.nlm.nih.gov/41872801/</a></span></li>
+<li id="ref-33"><span class="refnum">[33]</span><a class="backlink" href="#cite-33">^</a><span class="reftext">"Craniocervical instability in patients with Ehlers-Danlos syndromes: outcomes analysis following occipito-cervical fusion". Original article: <a href="https://pubmed.ncbi.nlm.nih.gov/38163828/">https://pubmed.ncbi.nlm.nih.gov/38163828/</a></span></li>
+<li id="ref-34"><span class="refnum">[34]</span><a class="backlink" href="#cite-34">^</a><span class="reftext">"Craniocervical Instability in Ehlers-Danlos Syndrome, A Systematic Review of Diagnostic and Surgical Treatment Criteria". Original article: <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC9609512/">https://pmc.ncbi.nlm.nih.gov/articles/PMC9609512/</a></span></li>
+<li id="ref-35"><span class="refnum">[35]</span><a class="backlink" href="#cite-35">^</a><span class="reftext">"Cervicogenic Dizziness Associated With Craniocervical Instability: A Case Report". Original article: <a href="https://www.journalmc.org/index.php/JMC/article/view/3792/3148">https://www.journalmc.org/index.php/JMC/article/view/3792/3148</a></span></li>
 </ol>
+</details>
+</main>
 <footer class="site">
-<p>This page is a mirror of the research pages on the home wiki. Last updated 27 November 2026.</p>
+<p class="last-edited"><span class="clock" aria-hidden="true">🕐</span> <strong>Last updated 28 November 2026</strong></p>
+<p>This page is a mirror of the research pages on the home wiki.</p>
 <p><a href="#bug-form">Report a problem with this page</a></p>
-<div class="bug-overlay" id="bug-form">
+<p><a href="2026-print.html">Printable version</a></p>
+<div class="bug-overlay" id="bug-form" tabindex="-1">
 <div class="bug-box" role="dialog" aria-label="Report a problem with this page">
 <p><strong>Report a problem with this page</strong></p>
 <p>This sends a report to the page owner through the form service. It does not publish anything, and it does not change the page.</p>
 <form action="https://formspree.io/f/mdegjbzk" method="POST">
+<input type="hidden" name="_next" value="https://eds-notes.github.io/research/thanks.html">
 <label for="bug-subject">Subject</label>
 <input id="bug-subject" name="_subject" type="text" required value="Bug report: EDS research 2026">
 <label for="bug-email">Your email address</label>
