@@ -5,21 +5,33 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>EDS research 2025</title>
 <style>
-body{font-family:system-ui,sans-serif;font-size:16px;line-height:26px;color:#202122;background:#fff;margin:0 auto;padding:0 16px 32px;max-width:720px}
-header.site{background:#f8f9fa;margin:0 -16px;padding:12px 16px}
+:root{--fs-body:16px;--lh-body:26px;--fs-title:32px;--lh-title:40px;--fs-h1:26px;--lh-h1:32px;--fs-h2:22px;--lh-h2:28px;--fs-h4:17px;--lh-h4:22px;--fs-ref:14px;--lh-ref:20px;--fs-refnum:13px;--fs-sup:12px;--fs-notice:15px;--lh-notice:20px;--fs-toc:15px;--lh-toc:22px;--fs-toc-title:15px;--fs-footer:13px;--lh-footer:19px}
+html.text-small{--fs-body:14px;--lh-body:23px;--fs-title:28px;--lh-title:35px;--fs-h1:23px;--lh-h1:29px;--fs-h2:20px;--lh-h2:26px;--fs-h4:16px;--lh-h4:21px;--fs-ref:13px;--lh-ref:19px;--fs-refnum:12px;--fs-sup:11px;--fs-notice:14px;--lh-notice:19px;--fs-toc:14px;--lh-toc:22px;--fs-toc-title:14px;--fs-footer:12px;--lh-footer:18px}
+html.text-large{--fs-body:18px;--lh-body:29px;--fs-title:36px;--lh-title:45px;--fs-h1:29px;--lh-h1:36px;--fs-h2:24px;--lh-h2:30px;--fs-h4:19px;--lh-h4:24px;--fs-ref:15px;--lh-ref:22px;--fs-refnum:14px;--fs-sup:13px;--fs-notice:16px;--lh-notice:22px;--fs-toc:16px;--lh-toc:24px;--fs-toc-title:16px;--fs-footer:14px;--lh-footer:20px}
+html.text-xl{--fs-body:20px;--lh-body:32px;--fs-title:40px;--lh-title:50px;--fs-h1:32px;--lh-h1:40px;--fs-h2:26px;--lh-h2:33px;--fs-h4:20px;--lh-h4:26px;--fs-ref:16px;--lh-ref:24px;--fs-refnum:15px;--fs-sup:14px;--fs-notice:17px;--lh-notice:23px;--fs-toc:17px;--lh-toc:26px;--fs-toc-title:17px;--fs-footer:14px;--lh-footer:20px}
+html.text-huge{--fs-body:24px;--lh-body:39px;--fs-title:48px;--lh-title:60px;--fs-h1:39px;--lh-h1:48px;--fs-h2:33px;--lh-h2:42px;--fs-h4:26px;--lh-h4:33px;--fs-ref:21px;--lh-ref:30px;--fs-refnum:20px;--fs-sup:18px;--fs-notice:23px;--lh-notice:30px;--fs-toc:23px;--lh-toc:33px;--fs-toc-title:23px;--fs-footer:20px;--lh-footer:29px}
+body{font-family:system-ui,sans-serif;font-size:var(--fs-body);line-height:var(--lh-body);color:#202122;background:#fff;margin:0 auto;padding:0 16px 32px;max-width:720px}
+header.site{display:flex;align-items:center;gap:12px;flex-wrap:wrap;background:#f8f9fa;margin:0 calc(50% - 50vw);padding:12px calc(50vw - 50%)}
 header.site nav{font-family:system-ui,sans-serif;font-size:14px;line-height:22px}
-header.site nav a{margin-right:12px}
+header.site nav a{display:inline-block;padding:12px 6px;margin-right:6px}
 header.site nav a[aria-current="page"]{font-weight:bold;text-decoration:none;color:#202122}
+.text-size-control{margin-left:auto;display:flex;align-items:center;gap:8px;font-family:system-ui,sans-serif;font-size:14px;line-height:22px;flex:none}
+.text-size-control label{flex:none}
+.text-size-control select{font:inherit;padding:6px 4px;border:1px solid #72777d;background:#fff;color:#202122}
+@media (max-width:719px){.text-size-control label{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}}
 a{color:#3366cc;text-decoration:none}
 a:visited{color:#795cb2}
 a:hover,a:focus{text-decoration:underline}
-h1{font-family:Georgia,serif;font-size:32px;line-height:40px;font-weight:normal;margin:12px 0 16px}
-h2{font-family:Georgia,serif;font-size:26px;line-height:32px;font-weight:normal;border-bottom:1px solid #c8ccd1;margin:14px 0 8px;padding-bottom:10px}
-h2.references-heading{font-size:22px;line-height:28px;border-bottom:none;border-top:1px solid #c8ccd1;padding-top:12px;margin-top:24px}
-h3{font-family:Georgia,serif;font-size:22px;line-height:28px;font-weight:normal;border-bottom:1px solid #c8ccd1;margin:14px 0 8px;padding-bottom:10px}
-h4{font-size:17px;line-height:22px;font-weight:bold}
-p.notice{font-family:system-ui,sans-serif;font-size:15px;line-height:20px;background:#f4f9fe;border-left:4px solid #3366cc;padding:4px 8px}
-ul{padding-left:20px;margin:0 0 12px}
+a:focus-visible,summary:focus-visible{outline:2px solid #3366cc;outline-offset:1px}
+h1{font-family:"Linux Libertine",Georgia,Times,serif;font-size:var(--fs-title);line-height:var(--lh-title);font-weight:normal;margin:12px 0 16px}
+h2{font-family:"Linux Libertine",Georgia,Times,serif;font-size:var(--fs-h1);line-height:var(--lh-h1);font-weight:normal;border-bottom:1px solid #c8ccd1;margin:14px 0 8px;padding-bottom:10px}
+h2.references-heading{font-size:var(--fs-h2);line-height:var(--lh-h2);border-bottom:none;border-top:1px solid #c8ccd1;padding-top:12px;margin-top:24px}
+h3{font-family:"Linux Libertine",Georgia,Times,serif;font-size:var(--fs-h2);line-height:var(--lh-h2);font-weight:normal;border-bottom:1px solid #c8ccd1;margin:14px 0 8px;padding-bottom:10px}
+h4{font-family:"Linux Libertine",Georgia,Times,serif;font-size:var(--fs-h4);line-height:var(--lh-h4);font-weight:normal}
+p.notice{font-family:system-ui,sans-serif;font-size:var(--fs-notice);line-height:var(--lh-notice);background:#f8f9fa;border:1px solid #a2a9b1;border-left:10px solid #3366cc;padding:4px 8px;display:flex;align-items:center;gap:8px}
+p.notice .notice-icon{flex:none;width:40px;height:40px}
+ul{padding-left:14px;margin:0 0 12px}
+sup{font-size:var(--fs-sup)}
 li{margin-bottom:0;padding:2px 0;overflow-wrap:break-word}
 p{margin:0 0 12px;overflow-wrap:break-word}
 details.section summary{list-style:none;cursor:pointer;display:flex;align-items:center;border-bottom:1px solid #c8ccd1;padding:14px 0 10px;margin-bottom:8px}
@@ -29,66 +41,95 @@ details.section summary .chevron{font-size:14px;color:#54595d;padding-right:8px;
 details.section summary .chevron::before{content:"▴"}
 details.section:not([open]) summary .chevron::before{content:"▾"}
 details.section summary h2,details.section summary h3{flex:1;margin:0;padding-bottom:0;border-bottom:none}
-.section-anchor{display:block}
-details.contents{font-family:system-ui,sans-serif;margin:12px 0}
-details.contents summary{font-size:15px;line-height:22px;font-weight:bold;cursor:pointer;list-style:none;display:flex;align-items:center}
+details.section summary h2.references-heading{border-top:none;margin-top:0;padding-top:0}
+details.section.subsection{margin-left:2em}
+.section-anchor{display:block;scroll-margin-top:72px}
+details.contents{font-family:system-ui,sans-serif;margin:12px 0;border:1px solid #aaa;background:#f8f9fa;padding:7px;display:table;max-width:100%;box-sizing:border-box;font-size:95%}
+details.contents summary{font-size:var(--fs-toc-title);line-height:var(--lh-toc);font-weight:bold;cursor:pointer;list-style:none;display:flex;align-items:center;justify-content:center;padding:11px 0}
 details.contents summary::-webkit-details-marker{display:none}
 details.contents summary::marker{content:""}
 details.contents summary .chevron{font-size:14px;color:#54595d;padding-right:8px;flex:none}
 details.contents summary .chevron::before{content:"▴"}
 details.contents:not([open]) summary .chevron::before{content:"▾"}
-details.contents ul{margin:4px 0;padding-left:20px}
-details.contents li{margin-bottom:0;padding:10px 0}
-details.contents li a{font-family:Georgia,serif;font-size:18px;line-height:24px}
-footer.site{font-family:system-ui,sans-serif;font-size:13px;line-height:19px;border-top:1px solid #c8ccd1;margin-top:24px;padding-top:12px;color:#54595d}
-ol.references{font-size:14px;line-height:20px}
-ol.references li{overflow-wrap:break-word}
-.bug-overlay{position:fixed;inset:0;background:rgba(0,0,0,.5);display:none;align-items:flex-start;justify-content:center;padding:24px 12px;z-index:10}
+details.contents summary h2{display:inline;font-family:system-ui,sans-serif;font-size:var(--fs-toc-title);line-height:var(--lh-toc);font-weight:bold;border-bottom:none;margin:0;padding:0}
+details.contents summary .toctoggle{font-size:12px;line-height:var(--lh-toc);font-weight:normal;margin-left:4px}
+details.contents summary .toctoggle::before{content:"[hide]"}
+details.contents:not([open]) summary .toctoggle::before{content:"[show]"}
+details.contents ul{list-style:none;margin:4px 0;padding:0}
+details.contents ul ul{margin:0 0 0 2em;padding:0}
+details.contents li{margin-bottom:0;padding:2px 0}
+details.contents li a{display:block;padding:11px 0;font-family:system-ui,sans-serif;font-size:var(--fs-toc);line-height:var(--lh-toc)}
+details.contents .tocnumber,details.contents .toctext,details.contents .toccount{display:table-cell;text-decoration:inherit}
+details.contents .tocnumber{padding-right:0.5em;color:#000}
+details.contents .toccount{padding-left:0.5em;color:#202122;text-decoration:none}
+footer.site{font-family:system-ui,sans-serif;font-size:var(--fs-footer);line-height:var(--lh-footer);margin-top:24px;color:#54595d}
+footer.site .last-edited{background:#eaecf0;margin:0 calc(50% - 50vw);padding:12px calc(50vw - 50%);font-size:var(--fs-footer);line-height:var(--lh-footer);font-weight:bold;color:#202122}
+footer.site .last-edited .clock{font-size:16px;font-weight:normal}
+ol.references{font-size:var(--fs-ref);line-height:var(--lh-ref);list-style:none;padding-left:0}
+ol.references li{display:flex;overflow-wrap:break-word;padding:4px 0}
+ol.references .refnum{flex:none;color:#3366cc;font-size:var(--fs-refnum);line-height:var(--lh-ref);padding-right:8px}
+ol.references .backlink{flex:none;padding-right:8px}
+ol.references .reftext{flex:1;min-width:0}
+.bug-overlay{position:fixed;inset:0;display:none;align-items:flex-start;justify-content:center;padding:24px 12px;z-index:10;overflow-y:auto}
 .bug-overlay:target{display:flex}
-.bug-box{background:#fff;max-width:480px;width:100%;padding:16px;border:1px solid #54595d;font-family:system-ui,sans-serif;font-size:14px;line-height:20px}
+.bug-box{background:#fff;max-width:480px;width:100%;padding:16px;border:1px solid #a2a9b1;font-family:system-ui,sans-serif;font-size:var(--fs-body);line-height:var(--lh-body)}
 .bug-box label{display:block;margin:10px 0 4px;font-weight:bold}
 .bug-box input,.bug-box textarea{width:100%;box-sizing:border-box;font:inherit;padding:6px;border:1px solid #72777d}
 .bug-box textarea{min-height:120px}
-.bug-box button{font:inherit;padding:8px 16px;margin:12px 8px 0 0}
+.bug-box button{font:inherit;font-size:var(--fs-notice);padding:12px 10px;margin:12px 8px 0 0;border:1px solid #3366cc;color:#3366cc;background:#fff}
 .bug-box .gotcha{display:none}
+@media (prefers-color-scheme: dark){body{background:#202122;color:#eaecf0}a{color:#88a3e8}a:visited{color:#88a3e8}h1,h2,h3,h4{color:#f8f9fa}header.site{background:#101418}header.site nav a[aria-current="page"]{color:#eaecf0}details.contents{background:#101418}details.contents li a{color:#eaecf0}details.contents .tocnumber{color:#eaecf0}details.contents .toccount{color:#eaecf0}ol.references{color:#eaecf0}ol.references .refnum{color:#88a3e8}p.notice{background:#101418;color:#eaecf0}footer.site{color:#eaecf0}footer.site .last-edited{background:#101418;color:#eaecf0}details.section summary .chevron,details.contents summary .chevron{color:#eaecf0}.bug-box{background:#202122;color:#eaecf0}.bug-box input,.bug-box textarea{background:#202122;color:#eaecf0}.bug-box button{border-color:#88a3e8;color:#88a3e8;background:#202122}.text-size-control select{background:#202122;color:#eaecf0}}
+@media print{header.site{display:none}.bug-overlay{display:none!important}a{text-decoration:underline}}
 </style>
+<script>(function(){try{var v=localStorage.getItem("eds-text-size");if(v==="small"||v==="large"||v==="xl"||v==="huge"){document.documentElement.classList.add("text-"+v);}}catch(e){}})();document.addEventListener("DOMContentLoaded",function(){var s=document.getElementById("text-size");if(!s)return;try{var v=localStorage.getItem("eds-text-size");if(v)s.value=v;}catch(e){}s.addEventListener("change",function(){var v=s.value;var h=document.documentElement;h.classList.remove("text-small","text-large","text-xl","text-huge");if(v!=="standard")h.classList.add("text-"+v);try{localStorage.setItem("eds-text-size",v);}catch(e){}});});</script>
 </head>
 <body>
 <header class="site"><nav aria-label="Years">
-<a href="years.html">Years</a>
+<a href="index.html">Years</a>
 <a href="2026.html">2026</a>
 <a href="2025.html" aria-current="page">2025</a>
-</nav></header>
+</nav>
+<div class="text-size-control"><label for="text-size">Text size</label><select id="text-size"><option value="small">Small</option><option value="standard" selected>Standard</option><option value="large">Large</option><option value="xl">Extra large</option><option value="huge">Huge</option></select></div>
+</header>
+<main>
 <h1>EDS research 2025</h1>
-<p class="notice">This is research information only, not medical advice.</p>
-<details class="contents">
-<summary><span class="chevron" aria-hidden="true"></span>Contents</summary>
+<p class="notice"><svg class="notice-icon" aria-hidden="true" viewBox="0 0 62 62" width="40" height="40"><defs><radialGradient id="notice-shadow"><stop offset="0" stop-color="silver"/><stop offset=".88" stop-color="silver"/><stop offset="1" stop-color="silver" stop-opacity="0"/></radialGradient><linearGradient id="notice-blue" x1="42.986" x2="22.014" y1="7.013" y2="51.987" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#9ecefe"/><stop offset="1" stop-color="#1388ee"/></linearGradient><linearGradient id="notice-edge" x1="54.51" x2="9.547" y1="41.179" y2="16.249" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#1976d9"/><stop offset="1" stop-color="#3e73d3"/></linearGradient></defs><circle cx="32.5" cy="29.5" r="26.5" fill="url(#notice-shadow)" transform="matrix(1.0648 0 0 1.06482 -2.1 1.086)"/><circle cx="31" cy="31" r="25.8" fill="url(#notice-blue)" stroke="url(#notice-edge)" stroke-width="2"/><path fill="#fff" d="M23 25h12v19h4v4H23v-4h4V28h-4v-3z"/><circle cx="31" cy="17" r="4" fill="#fff"/><path fill="#fff" d="M54.02 40.251a24.823 24.824 0 1 1 .181-.463" opacity=".08"/></svg><span>This is research information only, not medical advice.</span></p>
+<details class="contents toc" open>
+<summary><span class="chevron" aria-hidden="true"></span><h2>Contents</h2><span class="toctoggle" aria-hidden="true"></span></summary>
 <ul>
-<li><a href="#december-2025">December 2025</a></li>
+<li><a href="#december-2025"><span class="tocnumber">1</span> <span class="toctext">December 2025</span><span class="toccount"> (0 entries)</span></a>
+<ul>
+<li><a href="#december-2025-ehlers-danlos-syndrome"><span class="tocnumber">1.1</span> <span class="toctext">Ehlers-Danlos syndrome</span></a></li>
+<li><a href="#december-2025-cranial-cervical-instability"><span class="tocnumber">1.2</span> <span class="toctext">Cranial cervical instability</span></a></li>
+</ul></li>
 </ul>
 </details>
-<p>Every entry here is research about Ehlers-Danlos syndrome (EDS), or about a related condition as it relates to EDS. This is research information only, not medical advice.</p>
-<p><a href="years.html">Ehlers-Danlos syndrome research</a> is the index of years. This page covers 2025 only.</p>
-<details class="section" open>
+<details class="section">
 <summary><span class="chevron" aria-hidden="true"></span><h2>December 2025</h2></summary>
 <span class="section-anchor" id="december-2025"></span>
-<details class="section subsection" open>
+<details class="section subsection">
 <summary><span class="chevron" aria-hidden="true"></span><h3>Ehlers-Danlos syndrome</h3></summary>
+<span class="section-anchor" id="december-2025-ehlers-danlos-syndrome"></span>
 <p class="no-items">No new EDS items were noted in December 2025.</p>
 </details>
-<details class="section subsection" open>
+<details class="section subsection">
 <summary><span class="chevron" aria-hidden="true"></span><h3>Cranial cervical instability</h3></summary>
+<span class="section-anchor" id="december-2025-cranial-cervical-instability"></span>
 <p class="no-items">No new CCI items were noted in December 2025.</p>
 </details>
 </details>
+</main>
 <footer class="site">
-<p>This page is a mirror of the research pages on the home wiki. Last updated 27 November 2026.</p>
+<p class="last-edited"><span class="clock" aria-hidden="true">🕐</span> <strong>Last updated 28 November 2026</strong></p>
+<p>This page is a mirror of the research pages on the home wiki.</p>
 <p><a href="#bug-form">Report a problem with this page</a></p>
-<div class="bug-overlay" id="bug-form">
+<p><a href="2025-print.html">Printable version</a></p>
+<div class="bug-overlay" id="bug-form" tabindex="-1">
 <div class="bug-box" role="dialog" aria-label="Report a problem with this page">
 <p><strong>Report a problem with this page</strong></p>
 <p>This sends a report to the page owner through the form service. It does not publish anything, and it does not change the page.</p>
 <form action="https://formspree.io/f/mdegjbzk" method="POST">
+<input type="hidden" name="_next" value="https://eds-notes.github.io/research/thanks.html">
 <label for="bug-subject">Subject</label>
 <input id="bug-subject" name="_subject" type="text" required value="Bug report: EDS research 2025">
 <label for="bug-email">Your email address</label>
